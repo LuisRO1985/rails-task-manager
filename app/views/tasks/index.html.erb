@@ -1,0 +1,12 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+<%= link_to "Create a new task", new_task_path %>
+
+<!-- app/views/restaurants/index.html.erb -->
+<% @tasks.each do |task| %>
+  <h2><%= task.name %></h2>
+  <p><%= task.address %></p>
+  <p><%= task.description %></p>
+  <%= link_to "Edit a task", edit_task_path(task) %>
+
+<% end %>
